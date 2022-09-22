@@ -2,7 +2,7 @@
 title: "Greetings!"
 author: "Husada"
 date: "2022-09-19"
-categories: [blog]
+categories: [blog, cat]
 title-block-banner: false
 page-layout: article
 ---
