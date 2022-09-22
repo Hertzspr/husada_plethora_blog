@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -66,9 +71,11 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../../index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Husada Plethora</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -134,23 +141,26 @@ ul.task-list{list-style: none;}
 </header>
 
 <p>Hello R-users!</p>
-<p>What’s the deal with <a href="https://www.tidymodels.org/">tidymodels</a>? It sounds complex and overwhelming at first. After some experience with it, it still feels like that. It’s the a heap new system to struggle through for modeling machine learning.</p>
+<p>What’s the deal with <a href="https://www.tidymodels.org/">tidymodels</a>?</p>
+<p>It sounds complex and overwhelming at first. After some experience with it, it still feels like that. It’s a heap of new system to struggle through to model ML.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="tidymodels.png" class="img-fluid figure-img" width="200"></p>
 </figure>
 </div>
-<p>Why would you want to get through that heap instead of facing each ML engine one on one? Like when you need random forest, you reach out for ranger, or when you need linear regression, you reach out for the good old lm() in base R.</p>
-<p>Tidymodels supposedly offers a uniform syntax to apply various ML engines. When you deal with them without tidymodels, they brought with them their own various syntax, and you need to deal with their unique parameters and function structures. With tidy models these things are streamlined, no matter what engine you face, you can use the same parameters and arguments.</p>
-<p>But does it work really work as you expect? Mostly. But not all the time. Those unique characteristics from the original ML engines does not perish completely. They show their face usually when you try to tune them. Also, when something crapped on your code, it’s a bit harder to identify the problem, since modeling with tidymodels has multiple layers to it. Is the problem in the engine set up? Or is it the tuning grid? Perhaps, the recipe? The workflow set?</p>
+<p>Why would you want to get through that instead of facing each ML engine one on one? Why not when you simply need random forest, you reach out for ranger, or when you need linear regression, you reach out for the good old lm() in base R?</p>
+<p>Tidymodels supposedly offers a uniform syntax to interface with various ML engines. When you deal with them without tidymodels, you are against various different syntaxes, and you need to deal with their unique parameters and functions. With tidy models these things are streamlined. No matter what engine you face, you can use the tidymodels configuration.</p>
+<p>But does it really work as you expect? Mostly.</p>
+<p>But not all the time. Those unique characteristics from the original ML engines does not covered completely. They show their face usually when you try to tune them.</p>
+<p>Also, when something crapped on your code, it’s a bit harder to identify the problem, since modeling with tidymodels involved multiple layers chained together. Is the problem in the engine set up? Or is it the tuning grid? Perhaps, the recipe? Or the workflow set?</p>
 <p>Most of my brief experience with tidymodels are like this:</p>
 <ol type="1">
-<li>The multiple models failed to work</li>
-<li>Decided to scrap the multiple models in the workflow set</li>
-<li>Tried it on 1 model 1 workflow</li>
-<li>Found out and solved the problem</li>
-<li>Thought that this time I could make the multiple models work</li>
-<li>The multiple models failed to work</li>
+<li>My multiple models failed to work</li>
+<li>I decided to scrap the multiple models in the workflow set</li>
+<li>Tried it on 1 model 1 workflow approach</li>
+<li>Eventually found out and solved the problem</li>
+<li>Naively thought that this time I could make the multiple models work</li>
+<li>The multiple models failed to work … again</li>
 <li>repeat until #6 changed to #8</li>
 <li>The multiple models worked</li>
 </ol>
@@ -159,7 +169,7 @@ ul.task-list{list-style: none;}
 <p><img src="spongebob-patrick.gif" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>Sometimes I wonder if I could save more time if I trade the time struggling to make the multiple models work on just doing each model one at a time.</p>
+<p>Sometimes I wonder if I could save more time just doing each model one at a time instead of struggling to make the multiple models work.</p>
 <p>Maybe, the problem is really not with tidymodels, but with my lack of … everything.<br>
 </p>
 <div class="quarto-figure quarto-figure-center">
@@ -168,23 +178,15 @@ ul.task-list{list-style: none;}
 </figure>
 </div>
 <p>In short, I don’t know.</p>
-<p>Maybe if you have to deal with multiple ML engines frequently, to screen and to compare them, <strong>I think tidymodels is worth the effort</strong>. Yeah you should, especially if you have a good grasp on general programming skills with R and love <strong>Tidyverse</strong>.</p>
-<p>Me? What about my frustrating experience with tidymodels? Gimme a break. It was not only frustrating but also quite fun. Also, I’m just learning man, I ain’t using tidymodels for actual work,</p>
-<p>Cause:</p>
+<p>Maybe if you have to deal with multiple ML engines frequently, <strong>tidymodels is worth your effort</strong>. Yeah you should learn it, especially if you have a good grasp on general programming skills with R and you like <strong>Tidyverse</strong>.</p>
+<p>What about my frustrating experience with tidymodels? Probably doesn’t count. Yes It was frustrating, but also quite fun. Also, in my context, I’m just learning on my own. I ain’t using tidymodels for actual work, cause:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="quote.jpg" class="img-fluid figure-img" width="562"></p>
 </figure>
 </div>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
-<p><sub>Sorry&nbsp;if&nbsp;this&nbsp;ends&nbsp;in&nbsp;such&nbsp;a&nbsp;weird&nbsp;note.</sub></p>
-<p><sub>I&nbsp;tried&nbsp;to&nbsp;write&nbsp;seriously&nbsp;at&nbsp;first,&nbsp;but&nbsp;then&nbsp;I&nbsp;realized:&nbsp;perhaps&nbsp;I&nbsp;don’t&nbsp;have&nbsp;the&nbsp;cred&nbsp;to&nbsp;write&nbsp;about&nbsp;it&nbsp;so&nbsp;seriously.</sub></p>
-<p><sub>Anyway,&nbsp;truly&nbsp;been&nbsp;a&nbsp;while&nbsp;since&nbsp;I&nbsp;started&nbsp;and&nbsp;deleted&nbsp;a&nbsp;blog.</sub></p>
-<p><sub>How&nbsp;long&nbsp;will&nbsp;this&nbsp;blog&nbsp;stay&nbsp;up&nbsp;and&nbsp;not&nbsp;deleted&nbsp;because&nbsp;I’m&nbsp;ashamed&nbsp;of&nbsp;it?</sub></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -256,7 +258,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

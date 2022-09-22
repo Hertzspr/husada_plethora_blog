@@ -7,13 +7,13 @@ title-block-banner: false
 page-layout: article
 ---
 
-Greetings,
+Ahoy\~!,
 
 I had been wondering for a while whether or not to start a blog. I thought a simple [ShinyApp](https://8k2lvx-sasmito0yudha-husada.shinyapps.io/syh_cv/ "my portfolio") is sufficient as portfolio to help my transition into data science.
 
-So far it's not enough and I rarely update that anyway. There are several new projects I've done but not updated in that ShinyApp. I tend and I will update it in bulk, later.
+So far it's not enough and I rarely update that anyway. There are several new projects I've done but not updated in that ShinyApp. I will update it in bulk, later.
 
-Meanwhile, here I am in a new blogging journey with quarto.
+Meanwhile, here I am starting a blogging journey with quarto.
 
 Here's a picture of my cat for your wasted time reading this post:
 
