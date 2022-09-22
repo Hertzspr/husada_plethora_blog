@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "Husada Plethora"
+  navbar:
+    background: primary
+    search: true
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/Hertzspr
+      - icon: linkedin
+        href: https://www.linkedin.com/in/sasmito-yudha-husada-00a577221
+format:
+  html:
+    theme: vapor
+    css: styles.css
+
+editor: visual
+

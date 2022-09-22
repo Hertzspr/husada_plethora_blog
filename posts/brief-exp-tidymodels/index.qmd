@@ -1,0 +1,59 @@
+---
+title: "Brief Experience In Learning Tidymodels"
+author: "Husada"
+date: "2022-09-22"
+categories: [blog, tidymodels]
+image: "image.jpg"
+title-block-banner: false
+---
+
+Hello R-users!
+
+What's the deal with [tidymodels](https://www.tidymodels.org/)? It sounds complex and overwhelming at first. After some experience with it, it still feels like that. It's the a heap new system to struggle through for modeling machine learning.
+
+![](tidymodels.png){fig-align="center" width="200"}
+
+Why would you want to get through that heap instead of facing each ML engine one on one? Like when you need random forest, you reach out for ranger, or when you need linear regression, you reach out for the good old lm() in base R.
+
+Tidymodels supposedly offers a uniform syntax to apply various ML engines. When you deal with them without tidymodels, they brought with them their own various syntax, and you need to deal with their unique parameters and function structures. With tidy models these things are streamlined, no matter what engine you face, you can use the same parameters and arguments.
+
+But does it work really work as you expect? Mostly. But not all the time. Those unique characteristics from the original ML engines does not perish completely. They show their face usually when you try to tune them. Also, when something crapped on your code, it's a bit harder to identify the problem, since modeling with tidymodels has multiple layers to it. Is the problem in the engine set up? Or is it the tuning grid? Perhaps, the recipe? The workflow set?
+
+Most of my brief experience with tidymodels are like this:
+
+1.  The multiple models failed to work
+2.  Decided to scrap the multiple models in the workflow set
+3.  Tried it on 1 model 1 workflow
+4.  Found out and solved the problem
+5.  Thought that this time I could make the multiple models work
+6.  The multiple models failed to work
+7.  repeat until #6 changed to #8
+8.  The multiple models worked
+
+![](spongebob-patrick.gif){fig-align="center"}
+
+Sometimes I wonder if I could save more time if I trade the time struggling to make the multiple models work on just doing each model one at a time.
+
+Maybe, the problem is really not with tidymodels, but with my lack of ... everything.\
+
+![](giphy.webp){fig-align="center"}
+
+In short, I don't know.
+
+Maybe if you have to deal with multiple ML engines frequently, to screen and to compare them, **I think tidymodels is worth the effort**. Yeah you should, especially if you have a good grasp on general programming skills with R and love **Tidyverse**.
+
+Me? What about my frustrating experience with tidymodels? Gimme a break. It was not only frustrating but also quite fun. Also, I'm just learning man, I ain't using tidymodels for actual work,
+
+Cause:
+
+![](quote.jpg){fig-align="center" width="562"}
+
+## 
+
+~Sorry if this ends in such a weird note.~
+
+~I tried to write seriously at first, but then I realized: perhaps I don't have the cred to write about it so seriously.~
+
+~Anyway, truly been a while since I started and deleted a blog.~
+
+~How long will this blog stay up and not deleted because I'm ashamed of it?~
