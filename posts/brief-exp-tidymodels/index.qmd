@@ -5,6 +5,7 @@ date: "2022-09-22"
 categories: [blog, tidymodels]
 image: "image.jpg"
 title-block-banner: false
+page-layout: article
 ---
 
 Hello R-users!

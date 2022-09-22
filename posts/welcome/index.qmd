@@ -4,8 +4,17 @@ author: "Husada"
 date: "2022-09-19"
 categories: [blog]
 title-block-banner: false
+page-layout: article
 ---
 
-I had been wondering whether or not to start a blog, or just a simple [ShinyApp](https://8k2lvx-sasmito0yudha-husada.shinyapps.io/syh_cv/ "my portfolio") for portfolio is enough to transition into data science? So far it's not enough and I rarely update that anyway. There are several new projects I've done but not updated in that ShinyApp. I will later update it, in bulk so, meanwhile, here I am in a new journey with quarto.
+Greetings,
 
-![](thumbnail.jpg){width="690" height="436"}
+I had been wondering for a while whether or not to start a blog. I thought a simple [ShinyApp](https://8k2lvx-sasmito0yudha-husada.shinyapps.io/syh_cv/ "my portfolio") is sufficient as portfolio to help my transition into data science.
+
+So far it's not enough and I rarely update that anyway. There are several new projects I've done but not updated in that ShinyApp. I tend and I will update it in bulk, later.
+
+Meanwhile, here I am in a new blogging journey with quarto.
+
+Here's a picture of my cat for your wasted time reading this post:
+
+![](bleki.jpg){fig-align="center"}
